@@ -15,5 +15,4 @@ apt-get install -y mongodb-mongosh
 # Usual ports for MongoDB
 EXPOSE 27000-27025
 
-#CMD [ "mongosh" ]
 CMD [ "/atlas-connect.sh" ]
