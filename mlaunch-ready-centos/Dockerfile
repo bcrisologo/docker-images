@@ -23,6 +23,12 @@ RUN pip3 install mtools\[all\] && \
 mkdir -p /usr/local/m/versions && \
 npm install -g m
 
+# install libssl dependancy for running mtools
+RUN dnf install -y compat-openssl10
+
+# Final update
+RUN yum update -y
+
 # Usual ports for MongoDB
 EXPOSE 27000-27025
 
